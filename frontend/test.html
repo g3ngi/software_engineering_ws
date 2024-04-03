@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kanban Board</title>
+<link href="/node_modules/bootstrap-5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="styles.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <h1 class="text-center my-4">Kanban Board</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="board" id="board">
+                <div class="row" id="lists">
+                    <!-- Columns will be added dynamically here -->
+                </div>
+            </div>
+            <div class="add-list-button" onclick="addList()">+ Add a list</div>
+        </div>
+    </div>
+</div>
+
+<script src="/node_modules/bootstrap-5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
