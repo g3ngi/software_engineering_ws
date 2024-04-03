@@ -4,7 +4,7 @@ Welcome to our group's repository for the Software Engineering Workshop! In this
 
 ## Setup Docker
 
-1. Download Docker Desktop from [Docker Hub](https://hub.docker.com/).
+1. Download Docker Desktop from [Docker Desktop](https://www.docker.com/products/docker-desktop/).
 2. Install Docker Desktop by following the installation instructions for your operating system.
 
 ## Starting the Containerized Application
