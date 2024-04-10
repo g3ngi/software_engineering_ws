@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link href="login.css" rel="stylesheet">
+    
+  <link rel="stylesheet" type="text/css" href="login.css">
   <!-- Firebase scripts -->
   <script src="https://www.gstatic.com/firebasejs/9.6.6/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.6.6/firebase-auth.js"></script>
@@ -10,15 +11,17 @@
   <script src="login.js"></script>
 </head>
 <body>
-  <div class="container">
+    <header><h1>WorkStomper</h1></header>
+    <div class="container">
     <h2 class="welcome">Welcome to WorkStomper!</h2>
-    <form class="form" action="/login" method="POST">
-      <label for="user">User</label><br>
-      <input type="user" id="user" name="user" required><br>
-      <label for="password">Password</label><br>
+    <form class="form" id="loginForm" action="/login" method="POST">
+      <label for="email">EMAIL *</label><br>
+      <input type="email" id="email" name="email" required><br>
+      <label for="password">PASSWORD *</label><br>
       <input type="password" id="password" name="password" required><br>
       <input type="submit" value="Login">
     </form>
+    <p class="forgot">Forgot Password?</p>
   </div>
 </body>
 </html>
