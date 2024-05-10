@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Taskify Documentation</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Taskify Documentation">
+    <meta name="author" content="Taskify Documentation">
+    <link rel="shortcut icon" href="./images/default_favicon.png">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome JS-->
+    <script defer src="assets/fontawesome/js/all.min.js"></script>
+
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.2/styles/atom-one-dark.min.css">
+    <link rel="stylesheet" href="assets/plugins/simplelightbox/simple-lightbox.min.css">
+
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
+    <style>
+        .image-doc {
+            margin-bottom: 1rem;
+            width: 100%;
+            height: 400px;
+            object-fit: contain;
+        }
+
+        .twenty {
+            height: 20px;
+        }
+
+        .title-img {
+            height: 40px;
+        }
+    </style>
+</head>
+
+<body class="docs-page">
+    <header class="header fixed-top">
+        <div class="branding docs-branding">
+            <div class="container-fluid position-relative py-2">
+                <div class="docs-logo-wrapper">
+                    <button id="docs-sidebar-toggler" class="docs-sidebar-toggler docs-sidebar-visible me-2 d-xl-none"
+                        type="button">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="site-logo"><a class="navbar-brand" href="#section-1"><img class="logo-icon me-2"
+                                src="./images/default_full_logo.png" alt="logo"><span class="logo-text"><span
+                                    class="text-alt">Docs</span></span></a>
+                    </div>
+
+                </div>
+            </div>
+            <!--//container-->
+        </div>
+        <!--//branding-->
+    </header>
+    <!--//header-->
+
+
+    <div class="docs-wrapper">
+        <div id="docs-sidebar" class="docs-sidebar">
+            <div class="top-search-box d-lg-none p-3">
+                <form class="search-form">
+                    <input type="text" placeholder="Search the docs..." name="search" class="form-control search-input">
+                    <button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+            <nav id="docs-nav" class="docs-nav navbar">
+                <ul class="section-items list-unstyled nav flex-column pb-3">
+                    <li class="nav-item section-title"><a class="nav-link scrollto active" href="#section-1"><span
+                                class="theme-icon-holder me-2"><i class="fas fa-map-signs"></i></span>Introduction</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-1">&nbsp; What is
+                            taskify?</a>
+                    </li>
+
+                    <li class="nav-item section-title"><a class="nav-link scrollto" href="#section-6"><span
+                                class="theme-icon-holder me-2"><i class="fas fa-tools"></i></span>System
+                            Requirements</a>
+                    </li>
+
+                    <li class="nav-item section-title"><a class="nav-link scrollto" href="#section-7"><span
+                                class="theme-icon-holder me-2"><i class="fas fa-handshake"></i></span>Support</a>
+                    </li>
+
+
+                    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-2">
+                            <span class="theme-icon-holder me-2"><i
+                                    class="fas fa-arrow-down"></i></span>Installation</a>
+                    </li>
+
+                    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-3">
+                            <span class="theme-icon-holder me-2"><i class="fa fa-exclamation"></i></span>Key
+                            Considerations and Recommended Actions</a>
+                    </li>
+
+                    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-5"><span
+                                class="theme-icon-holder me-2"><i class="fas fa-tools"></i></span>Configure
+                            Taskify</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-5-2"><i class="fas fa-cog"></i> &nbsp;
+                            Settings (General,Email,System etc..)</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-5-24"><i
+                                class="fas fa-user-secret"></i>
+                            &nbsp; Email settings</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-5-25"><i
+                                class="fas fa-user-secret"></i>
+                            &nbsp; Pusher settings</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-5-4"><i class="far fa-hand-paper"></i>
+                            &nbsp; User Permission</a></li>
+                    </li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-5-1"><i class="fas fa-cog"></i> &nbsp;
+                            Auto Update</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-5-5"><i class="far fa-hand-paper"></i>
+                            &nbsp; Profile</a></li>
+                    </li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-5-6"><i class="far fa-hand-paper"></i>
+                            &nbsp; Languages</a></li>
+                    </li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-5-7"><i class="far fa-hand-paper"></i>
+                            &nbsp; Workspace</a></li>
+                    </li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-5-8"><i class="far fa-hand-paper"></i>
+                            &nbsp; Todos</a></li>
+                    </li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-5-9"><i class="far fa-hand-paper"></i>
+                            &nbsp; Projects</a></li>
+                    </li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-5-10"><i
+                                class="far fa-hand-paper"></i>
+                            &nbsp; Tasks</a></li>
+                    </li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-5-11"><i
+                                class="far fa-hand-paper"></i>
+                            &nbsp; Meetings</a></li>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-5-13"><i
+                                class="far fa-hand-paper"></i>
+                            &nbsp; Chat</a></li>
+                    </li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-5-14"><i
+                                class="far fa-hand-paper"></i>
+                            &nbsp; Users</a></li>
+                    </li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-5-15"><i
+                                class="far fa-hand-paper"></i>
+                            &nbsp; Client</a></li>
+                    </li>
+
+
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-5-18"><i
+                                class="far fa-hand-paper"></i>
+                            &nbsp; Contracts</a></li>
+                    </li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-5-19"><i
+                                class="far fa-hand-paper"></i>
+                            &nbsp; Payslips</a></li>
+                    </li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-5-20"><i
+                                class="far fa-hand-paper"></i>
+                            &nbsp; Leave Requests</a></li>
+                    </li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-5-23"><i
+                                class="far fa-hand-paper"></i>
+                            &nbsp; Notes</a></li>
+                    </li>
+                </ul>
+
+            </nav>
+            <!--//docs-nav-->
+        </div>
+        <!--//docs-sidebar-->
+        <div class="docs-content">
+            <div class="container">
+                <article class="docs-article" id="section-1">
+                    <section class="docs-section" id="item-1-1">
+
+                        <h2 class="section-heading">What is Taskify?</h2>
+                        <p> In today's fast-paced and dynamic business environment, effective project management is the
+                            cornerstone of success. Projects can be complex, involving numerous tasks, team members, and
+                            deadlines, making it essential to have a powerful and user-friendly tool to streamline the
+                            process. This is where Taskify comes into play.
+                        </p>
+
+                    </section>
+                    <!--//section-->
+
+
+                </article>
+
+
+
+
+                <article class="docs-article" id="section-6">
+                    <section class="docs-section">
+                        <h2 class="section-heading">Minimum System Requirements</h2>
+                        <p>Before you get started, please ensure that your server meets the following minimum system
+                            requirements:</p>
+
+                        <h3>Server Requirements</h3>
+                        <ul>
+                            <li>Web Server: Apache or Nginx</li>
+                            <li>Operating System: Taskify is compatible with a wide range of operating systems,
+                                including but not limited to Linux, macOS, and Windows. You can use Taskify on your
+                                preferred operating system without any compatibility concerns.</li>
+                            <li>Server Resources:
+                                <ul>
+                                    <li>CPU: At least 1-2 CPU cores</li>
+                                    <li>RAM: 1 GB of RAM</li>
+                                    <li>Disk Space: 10-20 GB of disk space</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <h3>PHP Version</h3>
+                        <p>Taskify requires PHP version 8.1 or higher.</p>
+
+                        <h3>MySQL Version</h3>
+                        <p>Taskify is compatible with MySQL version 5.7 or higher.</p>
+                    </section>
+                    <!--//section-->
+                </article>
+
+
+
+                <article class="docs-article" id="section-7">
+                    <section class="docs-section">
+                        <h2 class="section-heading">Get Support</h2>
+                        <p>If you need assistance or have any questions, our support team is here to help.</p>
+
+                        <p>You can reach us for support through the following channels:</p>
+
+                        <ul>
+                            <li>Skype: <a href="https://join.skype.com/invite/pId3MgrA3Mb5" target="_blank">Chat with us
+                                    on Skype</a></li>
+                            <!-- Add more support contact information as needed -->
+                        </ul>
+
+                        <p>We're available to assist you with any inquiries or issues you may encounter while using
+                            Taskify.</p>
+                    </section>
+                    <!--//section-->
+                </article>
+
+
+
+
+
+
+
+
+                <article class="docs-article" id="section-2">
+                    <header class="docs-header">
+                        <h1 class="docs-heading">Installation</h1>
+                        <section class="docs-intro">
+                            <p>
+                            <ol>
+                                <li>
+                                    Login into you cPanel.
+                                </li>
+                                <div class="simplelightbox-gallery">
+                                    <a href="./images/cpannel/cp-1.png">
+
+                                        <img src="./images/cpannel/cp-1.png" class="image-doc">
+                                    </a>
+                                </div>
+                                <li>
+                                    Go to database in your cPanel
+                                </li>
+                                <div class="simplelightbox-gallery">
+                                    <a href="./images/cpannel/cp-2.png">
+
+                                        <img src="./images/cpannel/cp-2.png" class="image-doc">
+                                    </a>
+                                </div>
+                                <li>
+                                    Enter database name and Create a new
+                                    database.
+                                </li>
+                                <div class="simplelightbox-gallery">
+                                    <a href="./images/cpannel/cp-3.png">
+
+                                        <img src="./images/cpannel/cp-3.png" class="image-doc">
+                                    </a>
+                                </div>
+                                <li>
+                                    Create Database user.
+                                </li>
+                                <div class="simplelightbox-gallery">
+                                    <a href="./images/cpannel/cp-4.png">
+
+                                        <img src="./images/cpannel/cp-4.png" class="image-doc">
+                                    </a>
+                                </div>
+                                <li>
+                                    Assign Database to the user.
+                                </li>
+                                <div class="simplelightbox-gallery">
+                                    <a href="./images/cpannel/cp-5.png">
+
+                                        <img src="./images/cpannel/cp-5.png" class="image-doc">
+                                    </a>
+                                </div>
+                                <li>
+                                    Open File manager now.
+                                </li>
+                                <div class="simplelightbox-gallery">
+                                    <a href="./images/cpannel/cp-6.png">
+
+                                        <img src="./images/cpannel/cp-6.png" class="image-doc">
+                                    </a>
+                                </div>
+                                <li>
+                                    Go to public_html or
+                                    public_html/your-taskify.in folder in the
+                                    file manager, whichever folder your
+                                    domain points to.
+                                </li>
+                                <div class="simplelightbox-gallery">
+                                    <a href="./images/cpannel/cp-7.png">
+
+                                        <img src="./images/cpannel/cp-7.png" class="image-doc">
+                                    </a>
+                                </div>
+                                <li>
+                                    Upload the downloaded zip in public_html
+                                    or public_html/your-taskify.in folder.
+                                </li>
+                                <div class="simplelightbox-gallery">
+                                    <a href="./images/cpannel/cp-8.png">
+                                        <img src="./images/cpannel/cp-8.png" class="image-doc">
+                                    </a>
+                                </div>
+                                <li>
+                                    unzip or extract the <b>Code vX.X -
+                                        upload this on server.zip</b> file
+                                    that you have just uploaded.
+                                </li>
+                                <div class="simplelightbox-gallery">
+                                    <a href="./images/cpannel/cp-9.png">
+                                        <img src="./images/cpannel/cp-9.png" class="image-doc">
+                                    </a>
+                                </div>
+                                <li>
+                                    verify that all these files are in
+                                    public_html or
+                                    public_html/your-taskify.in folder.
+                                </li>
+                                <div class="simplelightbox-gallery">
+                                    <a href="./images/cpannel/cp-10.png">
+                                        <img src="./images/cpannel/cp-10.png" class="image-doc">
+                                    </a>
+                                </div>
+                                <li>
+                                    visit http://your-taskify.in/install and configure the database.
+                                </li>
+                                <div class="simplelightbox-gallery">
+                                    <a href="./images/db.png">
+                                        <img src="./images/db.png" class="image-doc">
+                                    </a>
+                                </div>
+                                <li>
+                                    <p> After following the above steps you have
+                                        successfully configured the Database. Now configure the admin details.
+                                    </p>
+                                </li>
+                                <div class="simplelightbox-gallery">
+                                    <a href="./images/installation.png">
+                                        <img src="./images/installation.png" class="image-doc">
+                                    </a>
+                                </div>
+
+                            </ol>
+
+                            <p>
+                                Now click Install. Thats it! You are ready to
+                                run your App :
+                                http://your-taskify.in/
+                            </p>
+                        </section>
+                        <!--//docs-intro-->
+                    </header>
+                </article>
+                <!--//docs-article-->
+
+                <!--//docs-article-->
+
+
+                <article class="docs-article" id="section-3">
+                    <section class="docs-section">
+                        <h2 class="section-heading">Key Considerations and Recommended Actions</h2>
+                        <p>Below are critical scenarios along with corresponding recommended actions to take if
+                            encountered:</p>
+
+                        <h3>1. Issues with the system after an update:</h3>
+                        <p>In the event that you experience unexpected behavior or errors after updating the system to
+                            the new version, we recommend following the steps below:</p>
+                        <ol>
+                            <!-- <li>Go to the root of the project files and take a backup of the `composer.json` and
+                                `composer.lock` files. Also, rename the `vendor` directory to any other name.</li> -->
+
+                            <li>Inside new update files, You can see zip named
+                                <code>Code vx.x.x - upload this on server</code>
+                                extrat it and copy <code>vendor folder & composer.json and
+                                composer.lock</code> files from the root directory.</li>
+                            <li>Go to the root directory of your current project (Taskify) files, <span
+                                    style="font-weight: bold;">Take backup</span>, and replace the <code>vendor folder & composer.json and
+                                        composer.lock</code> files.</li>
+                            <!-- <li>Run the following commands in your terminal or command prompt from root directory: -->
+                            <li>Run the following command in your terminal or command prompt from root directory:
+                                <ul>
+                                    <!-- <li><code>composer install</code></li> -->
+                                    <li><code>composer dump-autoload</code></li>
+                                </ul>
+                                (Some cPanel providers offer built-in terminals, or you can use SSH access.)
+                            </li>
+                            <li>All done, check if the system works as expected. If not, please revert all the changes
+                                by restoring the backup. Feel free to reach out to us for further assistance.</li>
+                        </ol>
+
+
+                        <h3>2. Images are not displayed system-wide:</h3>
+                        <p>If you find that images are not displaying across the system, follow these steps:</p>
+                        <ol>
+                            <li>Ensure that the <code>symlink</code> function is not listed in the disabled functions,
+                                as shown in
+                                the image below. If it is, remove the <code>symlink</code> function from the list
+                                and save the
+                                changes.<p></p>
+                                <div class="simplelightbox-gallery">
+                                    <a href="./images/symlink.png">
+                                        <img src="./images/symlink.png" class="image-doc" alt="">
+                                    </a>
+                                </div>
+                            </li>
+                            <li>Visit <code>your.installation.url/create-symlink</code> in a browser tab and see if the
+                                issue resolves. If not,</li>
+                            <li>Try running the following command in your terminal or command prompt from the root
+                                directory:
+                                <ul>
+                                    <li><code>php artisan storage:link</code></li>
+                                </ul>
+                                (Some cPanel providers offer built-in terminals, or you can use SSH access.)
+                            </li>
+                            <li>If the issue persists after running the command, it's possible that the <code>symlink</code>
+                                function does not exist on your server. Please contact hosting support to needful for
+                                <code>symlink</code> function to be work. Feel free to reach out to us for further assistance.
+                            </li>
+                        </ol>
+
+
+
+                    </section>
+                    <!--//section-->
+                </article>
+
+
+
+
+
+                <article class="docs-article" id="section-5">
+                    <header class="docs-header">
+                        <h1 class="docs-heading">Configure Taskify</h1>
+                        <section class="docs-intro">
+                            <div class="callout-block callout-block-info">
+
+                                <div class="content">
+                                    <h4 class="callout-title">
+                                        <span class="callout-icon-holder me-1">
+                                            <svg class="svg-inline--fa fa-info-circle fa-w-16" aria-hidden="true"
+                                                focusable="false" data-prefix="fas" data-icon="info-circle" role="img"
+                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                                                data-fa-i2svg="">
+                                                <path fill="currentColor"
+                                                    d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z">
+                                                </path>
+                                            </svg>
+
+                                        </span>
+                                        <!--//icon-holder-->
+                                        Note
+                                    </h4>
+                                    <p>In order to Configure Taskify you must
+                                        have Admin Account.</p>
+                                </div>
+                                <!--//content-->
+                            </div>
+                            <p>
+                                Use the given guide to configure and customize
+                                Taskify as you need.
+
+                            </p>
+                            <p>
+                                Login as admin by
+                            </p>
+                            <ol>
+                                <li>Enter Admin Login id and Password. Click
+                                    Login</li>
+                                <div class="simplelightbox-gallery">
+                                    <a href="./images/logins.png">
+                                        <img src="./images/logins.png" class="image-doc" alt="">
+                                    </a>
+                                </div>
+                                <li>Great! You have logged in as Admin.</li>
+                                <div class="simplelightbox-gallery">
+                                    <a href="./images/dashboard.png">
+                                        <img src="./images/dashboard.png" class="image-doc" alt="">
+                                    </a>
+                                </div>
+                            </ol>
+
+                        </section>
+                        <!--//docs-intro-->
+                    </header>
+
+                    <section class="docs-section" id="item-5-2">
+                        <h2 class="section-heading">Settings</h2>
+                        <p>
+                            First Of all, we need to set general setting of app
+                        </p>
+                        <div class="simplelightbox-gallery">
+                            <a href="./images/settings2.png">
+                                <img src="./images/settings2.png" class="image-doc" />
+                            </a>
+                        </div>
+                        <p>Make sure to add <b>Company Title</b> and <b>App URL</b></p>
+                        <div id="item-5-24">
+                            <p>Now go to email setting. Without email setting email functionality will not work.</p>
+
+                            <div class="simplelightbox-gallery">
+                                <a href="./images/settings3.png">
+                                    <img src="./images/settings3.png" class="image-doc" />
+                                </a>
+                                <p>Now go to pusher setting. Without pusher setting chat functionality will not work.
+                                </p>
+                            </div>
+                        </div>
+                        <div id="item-5-25">
+                            <div class="simplelightbox-gallery">
+                                <a href="./images/pusher_settings.png">
+                                    <img src="./images/pusher_settings.png" class="image-doc" />
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!--//section-->
+
+                    <!--//section-->
+
+                    <section class="docs-section" id="item-5-4">
+                        <h2 class="section-heading">User Permission</h2>
+                        <p>Admin always have all the permission. Here you can set permissions for members and clients.
+                        </p>
+                        <div class="simplelightbox-gallery">
+                            <a href="./images/permission.png">
+                                <img src="./images/permission.png" class="image-doc" />
+                            </a>
+                        </div>
+                        <div class="section_bdr"></div>
+                    </section>
+
+                    <section class="docs-section" id="item-5-1">
+                        <h2 class="section-heading">Auto updater</h2>
+                        <p>
+                            How to use auto updater to update system from current version to next version.
+                        </p>
+                        <p>
+                            NOTE : Make sure you update system in sequence. Like if you have current version 1.0.0 and
+                            you
+                            want to update this version to 1.0.5 then you can't update it directly. You must have to
+                            update in sequence like first update version 1.0.1 then 1.0.2 and 1.0.3 and so on.
+                        </p>
+                        <li>
+                            Only two simple step will update your system.
+                        </li>
+                        <ol>
+                            <li>
+                                Find and download update.zip folder from the downloaded package when ever new update
+                                arrives.
+                            </li>
+                            <li>
+                                Upload update.zip folder at place shown in below image and click Update Now. that's all
+                                your system is now updated.
+                            </li>
+                        </ol>
+                        <div class="simplelightbox-gallery">
+                            <a href="./images/settings.png">
+                                <img src="./images/settings.png" class="image-doc" alt="">
+                            </a>
+                        </div>
+                    </section>
+
+                    <section class="docs-section" id="item-5-5">
+                        <h2 class="section-heading">Profile</h2>
+                        <p>Click at top right corner on your name. Then select profile from the dropdown and update own
+                            profile.</p>
+                        <div class="simplelightbox-gallery">
+                            <a href="./images/profile.png">
+                                <img src="./images/profile.png" class="image-doc" alt="">
+                            </a>
+                        </div>
+                        <div class="section_bdr"></div>
+                    </section>
+                    <section class="docs-section" id="item-5-6">
+                        <h2 class="section-heading">Manage Languages</h2>
+                        <p> Create and Manage Languages. </p>
+                        <div class="simplelightbox-gallery">
+                            <a href="./images/languages.png">
+                                <img src="./images/languages.png" class="image-doc" alt="">
+                            </a>
+                        </div>
+                        <div class="section_bdr"></div>
+
+                    </section>
+                    <section class="docs-section" id="item-5-7">
+                        <h2 class="section-heading">Manage Workspace</h2>
+                        <p> You can create new workspace from header bar and remove your self from any workspace. All
+                            the
+                            workspace will be listed in header bar and you can switch between them by click on them.
+                        </p>
+                        <div class="simplelightbox-gallery">
+                            <a href="./images/workspaces.png">
+                                <img src="./images/workspaces.png" class="image-doc" alt="">
+                            </a>
+                        </div>
+                        <div class="section_bdr"></div>
+
+                    </section>
+                    <section class="docs-section" id="item-5-8">
+                        <h2 class="section-heading">Todos</h2>
+                        <p>You can add, update, delete check and uncheck your todos.</p>
+                        <div class="simplelightbox-gallery">
+                            <a href="./images/todos.png">
+                                <img src="./images/todos.png" class="image-doc" alt="">
+                            </a>
+                        </div>
+                        <div class="section_bdr"></div>
+
+                    </section>
+                    <section class="docs-section" id="item-5-9">
+                        <h2 class="section-heading">Manage Projects</h2>
+                        <p>All the project will be listed here. You can create, update and delete project from here.</p>
+                        <div class="simplelightbox-gallery">
+                            <a href="./images/projects.png">
+                                <img src="./images/projects.png" class="image-doc" alt="">
+                            </a>
+                        </div>
+
+                        <p>Details page of project all the details about that specific project will be shown here. On
+                            this
+                            page you can create milestones, tasks for project and also upload files related to the
+                            projects.
+                        </p>
+                        <div class="simplelightbox-gallery">
+                            <a href="./images/project_detail.png">
+                                <img src="./images/project_detail.png" class="image-doc" alt="">
+                            </a>
+                        </div>
+
+                        <p>This is the page where you can create, update, delete tasks of the project and assing them to
+                            any
+                            user. You and user can drag and drop task in the process queue.</p>
+                        <div class="simplelightbox-gallery">
+                            <a href="./images/project_tasks.png">
+                                <img src="./images/project_tasks.png" class="image-doc" alt="">
+                            </a>
+                        </div>
+                        <div class="section_bdr"></div>
+
+                    </section>
+                    <section class="docs-section" id="item-5-10">
+                        <h2 class="section-heading">Tasks</h2>
+                        <p>You can view add, update and delete your project tasks.</p>
+                        <div class="simplelightbox-gallery">
+                            <a href="./images/tasks.png">
+                                <img src="./images/tasks.png" class="image-doc" alt="">
+                            </a>
+                        </div>
+                        <div class="section_bdr"></div>
+
+
+                    </section>
+                    <section class="docs-section" id="item-5-11">
+                        <h2 class="section-heading">Meetings</h2>
+                        <p>You can view add, update and delete Meetings with your clients and team members for join
+                            meetings.</p>
+                        <div class="simplelightbox-gallery">
+                            <a href="./images/meeting.png">
+                                <img src="./images/meeting.png" class="image-doc" alt="">
+                            </a>
+                        </div>
+
+                    </section>
+                    <section class="docs-section" id="item-5-13">
+                        <h2 class="section-heading">Chat</h2>
+                        <p> Here you can communicate with your workspace memebers. This chat system only works if Web
+                            FCM
+                            settings is saved. All the users of your workspace will be listed here. Also you can create
+                            groups</p>
+                        <div class="simplelightbox-gallery">
+                            <a href="images/chat.png">
+                                <img src="./images/chat.png" class="image-doc" alt="">
+                            </a>
+                        </div>
+
+                        <div class="section_bdr"></div>
+
+                    </section>
+                    <section class="docs-section" id="item-5-14">
+                        <h2 class="section-heading">Manage Users</h2>
+                        <p> Here you can Add, View, Edit & Delete users from worspace.</p>
+                        <div class="simplelightbox-gallery">
+                            <a href="./images/manageUser.png">
+                                <img src="./images/manageUser.png" class="image-doc" alt="">
+                            </a>
+                        </div>
+                        <div class="section_bdr"></div>
+
+                    </section>
+                    <section class="docs-section" id="item-5-15">
+                        <h2 class="section-heading">clients</h2>
+                        <p> Here you can Add, View, Edit & Delete Clients from worspace.</p>
+                        <div class="simplelightbox-gallery">
+                            <a href="./images/clients.png">
+                                <img src="./images/clients.png" class="image-doc" alt="">
+                            </a>
+                        </div>
+                        <div class="section_bdr"></div>
+                    </section>
+                    <section class="docs-section" id="item-5-18">
+                        <h2 class="section-heading">Contracts</h2>
+                        <p> Here you can Add, View, Edit & Delete Contracts from worspace.</p>
+                        <div class="simplelightbox-gallery">
+                            <a href="./images/contracts.png">
+                                <img src="./images/contracts.png" class="image-doc" alt="">
+                            </a>
+                        </div>
+
+                        <div class="section_bdr"></div>
+                    </section>
+
+
+                    <section class="docs-section" id="item-5-19">
+                        <h2 class="section-heading">Payslips</h2>
+                        <p> Here you can Add, View, Edit & Delete payslips, payment methods, allowances and deductions
+                            for worspace.</p>
+                        <div class="simplelightbox-gallery">
+                            <a href="./images/payslips.png">
+                                <img src="./images/payslips.png" class="image-doc" alt="">
+                            </a>
+                        </div>
+
+                        <div class="section_bdr"></div>
+                    </section>
+
+                    <section class="docs-section" id="item-5-20">
+                        <h2 class="section-heading">Leave Requests</h2>
+                        <p>Here admin and manage leave requests coming from workspace users.</p>
+                        <div class="simplelightbox-gallery">
+                            <a href="./images/Leave.png">
+                                <img src="./images/Leave.png" class="image-doc" alt="">
+                            </a>
+                        </div>
+                        <div class="section_bdr"></div>
+                    </section>
+                    <section class="docs-section" id="item-5-23">
+                        <h2 class="section-heading">Manage Notes</h2>
+                        <p>This is the place where you can leave you notes for yourself. You can add, update, delete
+                            your
+                            notes.</p>
+                        <div class="simplelightbox-gallery">
+                            <a href="./images/notes.png">
+                                <img src="./images/notes.png" class="image-doc" alt="">
+                            </a>
+                        </div>
+
+                    </section>
+                    <!--//section-->
+                </article>
+                <footer class="footer">
+                    <div class="container text-center py-5">
+                        <small class="copyright">Made with <3 by <a href="https://infinitietech.com/" target="_blank">
+                                Infinitietech</a></small><br>
+                        <small class="copyright">Thanks to <a href="https://themes.3rdwavemedia.com/"
+                                target="_blank">3rd
+                                Wave Media</a> for the
+                            elegant documentation template.</small>
+                        <!--//social-list-->
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+    <!--//docs-wrapper-->
+
+
+    <!-- Javascript -->
+    <script src="assets/plugins/popper.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Page Specific JS -->
+    <script src="assets/plugins/smoothscroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js">
+    </script>
+    <script src="assets/js/highlight-custom.js"></script>
+    <script src="assets/plugins/simplelightbox/simple-lightbox.min.js"></script>
+    <script src="assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script>
+    <script src="assets/js/docs.js"></script>
+
+</body>
+
+</html>
