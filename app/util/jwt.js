@@ -5,7 +5,6 @@ const SECRET = "hello_world";
 class JWT {
   sign(id) {
     const token = jwt.sign({ username: id }, SECRET);
-    console.log(token);
     return token;
   }
 
