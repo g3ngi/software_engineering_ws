@@ -1,5 +1,9 @@
 const User = require("../models/User.js");
 const JWT = require("../util/jwt.js");
+const path = require("path");
+const login_path = path.join(__dirname, "../../public/views/login.ejs");
+
+
 
 async function loginHandler(username, password, res) {
   if (username != null || password != null) {
@@ -11,10 +15,8 @@ async function loginHandler(username, password, res) {
       token = obj.sign(user_data["user"]);
       res.cookie("token", token);
       res.redirect("/kanban");
-    } else {
-      res.send(
-        "invalid credentials\n<meta http-equiv='refresh' content='2; url=\"/users\"'>"
-      );
+    } else{
+      res.render(login_path, { error: "Incorrect Password / Username !"});
     }
   }
 }

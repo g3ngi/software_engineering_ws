@@ -8,12 +8,13 @@ const { loginHandler } = require(path.join(
   "../controllers/userController"
 ));
 
-// Redirect root URL to login.html
 // link domain /users
 app.use(GuestMiddleware);
 
+
+// Redirect root URL to login page
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "../../public/views/login.html"));
+  res.render(path.join(__dirname, "../../public/views/login.ejs"));
 });
 
 app.post("/login", async (req, res) => {
