@@ -82,6 +82,12 @@ header {
     color: black;
     text-decoration: none;
   }
+
+  .error-message {
+    color: red;
+    font-size: 0.8em;
+    margin-top: 5px;
+}
   
   /* Media query for screens up to 480px (mobile devices) */
   @media screen and (max-width: 480px) {

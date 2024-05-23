@@ -9,3 +9,4 @@ services:
       - PORT=3000
     volumes:
       - ./app:/usr/src/app
+      - ./public:/user/src/public
