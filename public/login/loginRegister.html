@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewreport" content="width=device-width, initial-scale=1.0">
+        <title>Login & Registration Page</title>
+        <link rel="stylesheet" type="text/css" href="style-login.css">
+        <!-- Firebase scripts -->
+        <script src="https://www.gstatic.com/firebasejs/9.6.6/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.6.6/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.6.6/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.6.6/firebase-analytics.js"></script>
+    </head>
+    <body class="loginRegister-page">
+        <header class="header-loginRegister-page">
+            <h2 class="logo-loginRegister-page">
+                <img src="D:/File Kuliah/ppp/landingPage_Login+Register/images/logo-removebg.png" alt="Logo">
+            </h2>
+            <nav class="navigation">
+                <a href="landing.html">Home</a>
+            </nav>
+        </header>
+        <div class="wrapper">
+            <div class="form-box login">
+                <h2>Login</h2>
+                <form action="#">
+                    <div class="input-user-box">
+                        <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                        <input type="email" required>
+                        <label>Email</label>
+                    </div>
+                    <div class="input-user-box">
+                        <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                        <input type="password" required>
+                        <label>Password</label>
+                    </div>
+                    <div class="remember-forgotpw">
+                        <label><input type="checkbox">Remember me</label>
+                        <a href="#">Forgot Password?</a>
+                    </div>
+                    <button type="submit" class="button">Login</button>
+                    <div class="login-register">
+                        <p>Don't have an account? <a href="#" class="register-link">Register</a></p>
+                    </div>
+                </form>
+            </div>
+            <div class="form-box register">
+                <h2>Registration</h2>
+                <form action="#">
+                    <div class="input-user-box">
+                        <span class="icon"><ion-icon name="person"></ion-icon></span>
+                        <input type="text" required>
+                        <label>Username</label>
+                    </div>
+                    <div class="input-user-box">
+                        <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                        <input type="email" required>
+                        <label>Email</label>
+                    </div>
+                    <div class="input-user-box">
+                        <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                        <input type="password" required>
+                        <label>Password</label>
+                    </div>
+                    <div class="remember-forgotpw">
+                        <label><input type="checkbox">I agree to the terms & conditions</label>
+                    </div>
+                    <button type="submit" class="button">Register</button>
+                    <div class="login-register">
+                        <p>Already have an account? <a href="#" class="login-link">Login</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <script src="script-login.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </body>
+</html>
