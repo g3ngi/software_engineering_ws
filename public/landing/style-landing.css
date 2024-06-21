@@ -1,0 +1,350 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+/* VARIABLES */
+:root {
+    --c-dark: #212529;
+    --c-brand:#4c6e6f;
+    --c-brand-light: #7c9899;
+    --c-brand-rgb: rgb(106,141,121);
+    --c-body: #727272;
+    --font-base: "Poppins", sans-serif;
+    --box-shadow: 0px 15px 25px rgba(0,0,0,0.08);
+    --transition: all 0.5s ease;
+    --animation-duration: 10s;
+}
+
+@font-face {
+    font-family: Bakso Sapi;
+    src: url(bakso_sapi\BaksoSapi.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* RESET & HELPERS */
+body {
+    font-family: var(--font-base);
+    line-height: 1.7;
+    color: var(--c-body);
+    font-family: 'Bakso Sapi', sans-serif;
+}
+
+h1, h5,
+.h1, .h5 {
+    font-weight: 600;
+    color: var(--c-dark);
+}
+
+.title-header {
+    color: transparent;
+    background: black;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(to right, rgb(226, 212, 129) 35%, white 40%, rgb(226, 212, 129) 45%);
+	background-position: right;
+	background-size: 600%;
+    text-shadow: 0 0 0.5em  rgba(226, 212, 129, 0.5);
+    animation: changebg var(--animation-duration) ease 2s infinite,
+    glowing var(--animation-duration) ease 2s infinite;
+}
+
+@keyframes changebg {
+	to {
+		font-weight: 900;
+		background-position: left;
+	}
+}
+
+@keyframes glowing {
+	25% {
+		text-shadow: 0 0 0.1em white;
+	}
+	35% {
+		text-shadow: -0.1em 0 0.2em white;
+	}
+	45% {
+		text-shadow: 0.1em 0 0.2em white;
+	}
+	55% {
+		text-shadow: 0 0 0.1em white;
+	}
+}
+
+.navbar-nav a {
+    text-decoration: none;
+    color: var(--c-brand);
+    transition: var(--transition);
+    font-size: 1em;
+    margin-left: 20px;
+    font-weight: 900;
+    position: relative;
+}
+
+.navbar-nav a::after{
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background:#4c6e6f;
+    left: 0;
+    content: '';
+    bottom: 1px;
+    border-radius: 6px;
+    transform: scaleX(0);
+    transition: transform .5s;
+    transform-origin: right;
+}
+
+.navbar-nav a:hover::after {
+    color: var(--c-brand-light);
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.section-padding {
+    padding-top: 140px;
+    padding-bottom: 140px;
+}
+
+.theme-shadow {
+    box-shadow: var(--box-shadow);
+}
+
+/* IMAGE ZOOM */
+.image-zoom {
+    position: relative;
+    /* overflow: hidden; */
+}
+
+.image-zoom-wrapper {
+    overflow: hidden;
+    position: relative;
+}
+
+.image-zoom-wrapper img{
+     transition: var(--transition);
+}
+
+.image-zoom:hover .image-zoom-wrapper img {
+    transform: scale(1.1);
+}
+
+
+/* NAVBAR */
+.navbar {
+    box-shadow: var(--box-shadow);
+}
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+    color: var(--c-dark);
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--c-brand);
+}
+
+
+/* BTN */
+.btn {
+    font-weight: 600;
+    font-size: 15px;
+    border-radius: 6px;
+    padding: 10px 24px;
+    width: 100px;
+    height: 45px;
+    background: transparent;
+    color: #162938;
+    margin-left: 40px;
+    cursor: pointer;
+    border: 2px solid #fff;
+    margin: 0;
+    inset: 0;
+}
+
+.btn-brand {
+    background-color: var(--c-brand-rgb);
+    color: white;
+    transition: 0.2s;
+}
+
+.btn-brand:hover {
+    background-color: white;
+    border-color: var(--c-brand-rgb);
+    color: var(--c-brand-rgb);
+}
+
+.btn-send{
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 6px;
+    padding: 10px 24px;
+    border: 2px solid #fff;
+}
+
+
+/* Home */
+.landing-full {
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.2) 20%, rgba(255,255,255, 0.507) 50%, rgba(255,255,255, 0.438)), url(images/ENHANCED-bg.03.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+section {
+    min-height: 100%;
+}
+
+/* SECTION TITLE */
+.section-title {
+    margin-bottom: 60px;
+}
+
+.section-title .line {
+    width: 60px;
+    height: 4px;
+    background-color: var(--c-brand);
+    margin: 16px auto 24px auto;
+}
+
+.section-title p {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    color: black;
+}
+
+
+/* ICONBOX */
+.iconbox {
+    width: 70px;
+    height: 70px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(var(--c-brand-rgb), 0.1);
+    color: var(--c-brand);
+    font-size: 34px;
+    flex: none;
+}
+
+/* SERVICE */
+.service {
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.service::after {
+    content: "";
+    width: 40px;
+    height: 40px;
+    background: rgba(var(--c-brand-rgb), 0.2);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transition: var(--transition);
+}
+
+
+.service:hover::after {
+    width: 100%;
+    height: 100%;
+    background: var(--c-brand);
+    z-index: -1;
+}
+
+.service:hover h5,
+.service:hover p {
+    color: white;
+}
+
+.service:hover .iconbox {
+    background-color: rgba(255,255,255,0.2);
+    color: white;
+}
+
+/* CONTACT */
+#contact {
+    position: relative;
+    z-index: 2;
+}
+
+#contact::after {
+    content: "";
+    width: 100%;
+    height: 70%;
+    background: linear-gradient(var(--c-brand-rgb), var(--c-brand-rgb)), url(../images/counter.jpg);
+    opacity: 0.4;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#contact .form-control {
+    border-radius: 0;
+}
+
+#contact .form-control:focus {
+    box-shadow: none;
+    border-color: var(--c-brand);
+}
+
+/* FOOTER */
+footer {
+    padding-top: 120px;
+}
+
+.footer-top {
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer-bottom {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+
+footer li,
+footer p,
+footer a {
+    color: rgba(255,255,255,0.7);
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer .line {
+    width: 40px;
+    height: 4px;
+    background-color: var(--c-brand);
+    margin-top: 12px;
+    margin-bottom: 24px;
+}
+
+.social-icons a {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 100px;
+}
+
+.social-icons a:hover {
+    background-color: var(--c-brand);
+    color: white;
+}
+
