@@ -1,20 +1,64 @@
-# Software Engineering Workshop - Group 3
+[Logo](https://github.com/SAN98231/for-image-link/assets/154386157/35363223-30f6-412b-8030-110c3c99e2b6)
 
-Welcome to our group's repository for the Software Engineering Workshop! In this project, we have developed a web application using Docker.
 
-## Setup Docker
+# WorkStomper
 
-1. Download Docker Desktop from [Docker Desktop](https://www.docker.com/products/docker-desktop/).
-2. Install Docker Desktop by following the installation instructions for your operating system.
+Kanban Style Task Management Board Webapp Integrated with GitHub.
 
-## Starting the Containerized Application
 
-1. Open your terminal or command prompt.
-2. Navigate to the directory where the application is located.
-3. Run the following command to start the application:
+## GitHub Integration
+WorkStomper is integrated with GitHub, allowing seamless synchronization of tasks and boards.
+## Features
 
-   ```bash
-   docker-compose up
-   ```
-4. Once the application is up and running, you can access it in your web browser at http://localhost:3000
+- Real-Time Collaboration
 
+- Kanban Board
+
+- Version Control
+
+
+## Installation
+
+Install WorkStomper with npm
+
+```bash
+  git clone https://github.com/g3ngi/software_engineering_ws
+```
+
+Install Dependecy
+```bash
+  npm Install
+```
+
+Firebase Configuration
+```bash
+  FIREBASE_API_KEY=your_api_key
+  FIREBASE_AUTH_DOMAIN=your_project_id.firebaseapp.com
+  FIREBASE_PROJECT_ID=your_project_id
+  FIREBASE_STORAGE_BUCKET=your_project_id.appspot.com
+  FIREBASE_MESSAGING_SENDER_ID=your_messaging_sender_id
+  FIREBASE_APP_ID=your_app_id
+```
+
+Running The Webapp
+```bash
+  npm start 
+```
+
+Accessing The Webapp
+```bash
+  http://localhost:3000
+```
+
+## Additional Note
+
+- Environment Variables: Ensure your .env file is correctly configured for Firebase and the GitHub API.
+- GitHub API Usage: If the application requires access to the GitHub API, you may need to configure the GitHub access token in the .env file:
+```bash
+  GITHUB_TOKEN=your_github_token
+```
+
+## Support
+
+For support, email ikhwanul.ahsan@binus.ac.id 
+or call +6285954636860
